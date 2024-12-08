@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        /* Container for the Contact Section */
+        .contact-container {
+            padding: 40px 20px;
+            background-color: #0000009c;  /* Matches the previous section background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 60px); /* Adjust height, subtract navbar height (60px) */
+            color: #ffffff;
+            margin: 0;
+            overflow: hidden; /* Prevents any overflow */
+        }
+    
+        /* Contact Card */
+        .contact-card {
+            background-color: rgba(255, 255, 255, 0.1);  /* Semi-transparent background */
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        /* Hover effect for contact card */
+        .contact-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+    
+        .contact-card h1 {
+            color: #ffffff;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+    
+        .contact-card p {
+            font-size: 16px;
+            color: #dddddd;
+            margin-bottom: 15px;
+        }
+    
+        .contact-card a {
+            color: #00ffff; /* Cyan color for links */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+    
+        .contact-card a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    
+        .contact-card .contact-details {
+            margin-top: 20px;
+            text-align: left;
+        }
+    
+        .contact-card .contact-details p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    
+        /* Prevent page overflow */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                            url("static/images/bgimg.jpg") no-repeat center center fixed;
+                background-size: cover;
+                color: white;
+            }
+    
+            /* Navbar styles */
+            .navbar {
+                background-color: black;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-around;
+                padding: 10px 0;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+                display: block;
+                text-align: center;
+                font-size: 1.1rem;
+                transition: background-color 0.3s, color 0.3s;
+            }
+            .navbar a:hover {
+                background-color: #3ddc84;
+                color: black;
+            }
+            .navbar a.active {
+                background-color: #162447;
+                color: white;
+            }
+    
+            /* Content styling */
+            .content {
+                padding: 20px;
+            }
+    </style>
+</head>
+<body>
+    
+
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="home.html" class="{% if title == 'Home' %}active{% endif %}">Home</a>
+    <a href="projects.html" class="{% if title == 'Projects' %}active{% endif %}">Projects</a>
+    <a href="about.html" class="{% if title == 'About' %}active{% endif %}">About</a>
+    <a href="contact.html" class="{% if title == 'Contact' %}active{% endif %}">Contact</a>
+    <a href="static\files\Tejas Bhusari.pdf" target="_blank" download>My Resume</a>
+</div>
+
+<div class="contact-container">
+    <div class="contact-card">
+        <h1>Contact Me</h1>
+        <div class="contact-details">
+            <p><b>Email:</b> <a href="mailto:tejasbhusari501@gmail.com">tejasbhusari501@gmail.com</a></p>
+            <p><b>Phone:</b> +91-7385343897</p>
+            <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/tejasbhusari/" target="_blank">linkedin.com/in/tejasbhusari</a></p>
+            <p><b>GitHub:</b> <a href="https://github.com/BTejas001" target="_blank">github.com/BTejas001</a></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
